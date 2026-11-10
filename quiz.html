@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Online Quiz Application</title>
+
+<link rel="stylesheet" href="quiz.css">
+</head>
+<body>
+
+<div class="container">
+
+    <!-- PAGE 1 -->
+    <div id="detailsPage" class="card">
+        <h1>ONLINE QUIZ</h1>
+
+        <input type="text" id="name" placeholder="Enter Name" required>
+        <input type="text" id="college" placeholder="Enter College Name">
+        <input type="date" id="dob">
+        <input type="text" id="dept" placeholder="Department">
+        <input type="email" id="email" placeholder="Email ID">
+
+        <button onclick="startQuiz()">Start Quiz</button>
+    </div>
+
+    <!-- PAGE 2 -->
+    <div id="quizPage" class="card" style="display:none;">
+
+        <h2>General Knowledge Quiz</h2>
+
+        <div class="progress">
+            <div id="progressBar"></div>
+        </div>
+
+        <h3 id="questionNumber"></h3>
+
+        <div id="questionBox"></div>
+
+        <div id="optionBox"></div>
+
+        <button onclick="nextQuestion()">Next</button>
+
+    </div>
+
+    <!-- PAGE 3 -->
+    <div id="resultPage" class="card" style="display:none;">
+
+        <h1>Quiz Result</h1>
+
+        <h2 id="userName"></h2>
+
+        <h3 id="score"></h3>
+        <h3 id="percentage"></h3>
+        <h3 id="correct"></h3>
+        <h3 id="wrong"></h3>
+
+        <div id="review"></div>
+
+        <button onclick="location.reload()">
+            Restart Quiz
+        </button>
+
+    </div>
+
+</div>
+
+<script src="quiz.js"></script>
+
+</body>
+</html>
